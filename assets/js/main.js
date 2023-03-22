@@ -110,7 +110,6 @@ for (let i = 0; i < membersTeam.length; i++) {
                     ${membersTeam[i].role}
                 </p>
             </div>
-            
         </div>`
     divEl.innerHTML += markup;
 }

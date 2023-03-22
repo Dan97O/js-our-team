@@ -9,6 +9,5 @@ img{
 
 .card{
   min-height: 350px;
-  width: 150px;
-  aspect-ratio: 1;
+  width: 200px;
 }
