@@ -45,7 +45,7 @@ Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
 //Trasformare la stringa foto in una immagine effettiva
 //Organizzare i singoli membri in card/schede
 
-
+const teamElement = document.querySelector('.information_teams');
 //MILESTONE 0:
 //Creare l’array di oggetti con le informazioni fornite.
 const membersTeam = [
@@ -85,11 +85,14 @@ const membersTeam = [
 //MILESTONE 1:
 //Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 for (let i = 0; i < membersTeam.length; i++) {
-  const member = membersTeam[i];
-  console.log(member);
+    let member = membersTeam[i];
+    console.log(member);
+
+
+    //MILESTONE 2:
+    //Stampare le stesse informazioni su DOM sottoforma di stringhe
+    const divEl = document.createElement("div");
+    divEl.textContent = `Nome: ${membersTeam[i].name}, Ruolo: ${membersTeam[i].role}, Foto: ${membersTeam[i].photo}`;
+    teamElement.appendChild(divEl)
 }
 
-
-
-//MILESTONE 2:
-//Stampare le stesse informazioni su DOM sottoforma di stringhe
