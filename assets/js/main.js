@@ -52,32 +52,32 @@ const membersTeam = [
   {
     name: 'Wayne Barnett',
     role: 'Founder & CEO',
-    photo: 'wayne-barnett-founder-ceo.jpg',
+    photo: "./assets/img/wayne-barnett-founder-ceo.jpg",
   },
   {
     name: 'Angela Caroll',
     role: 'Chief Editor',
-    photo: 'angela-caroll-chief-editor.jpg',
+    photo: './assets/img/angela-caroll-chief-editor.jpg',
   },
   {
     name: 'Walter Gordon',
     role: 'Office Manager',
-    photo: 'walter-gordon-office-manager.jpg',
+    photo: './assets/img/walter-gordon-office-manager.jpg',
   },
   {
     name: 'Angela Lopez',
     role: 'Social Media Manager',
-    photo: 'angela-lopez-social-media-manager.jpg',
+    photo: './assets/img/angela-lopez-social-media-manager.jpg',
   },
   {
     name: 'Scott Estrada',
     role: 'Developer',
-    photo: 'scott-estrada-developer.jpg',
+    photo: './assets/img/scott-estrada-developer.jpg',
   },
   {
     name: 'Barbara Ramos',
     role: 'Graphic Designer',
-    photo: 'barbara-ramos-graphic-designer.jpg',
+    photo: './assets/img/barbara-ramos-graphic-designer.jpg',
   },
 ];
 
@@ -92,7 +92,26 @@ for (let i = 0; i < membersTeam.length; i++) {
     //MILESTONE 2:
     //Stampare le stesse informazioni su DOM sottoforma di stringhe
     const divEl = document.createElement("div");
-    divEl.textContent = `Nome: ${membersTeam[i].name}, Ruolo: ${membersTeam[i].role}, Foto: ${membersTeam[i].photo}`;
+    /* divEl.textContent = `Nome: ${membersTeam[i].name}, Ruolo: ${membersTeam[i].role}, Foto: ${membersTeam[i].photo}`; */
     teamElement.appendChild(divEl)
+
+    //BONUS 1:
+    //Trasformare la stringa foto in una immagine effettiva
+    //BONUS 2:
+    //Organizzare i singoli membri in card/schede
+    const markup = `
+        <div class="card">
+            <img src="${membersTeam[i].photo}" alt="" class="card-img-top">
+            <div class="card-body">
+                <h3>
+                    ${membersTeam[i].name} 
+                </h3>
+                <p>
+                    ${membersTeam[i].role}
+                </p>
+            </div>
+            
+        </div>`
+    divEl.innerHTML += markup;
 }
 
